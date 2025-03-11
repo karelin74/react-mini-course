@@ -1,12 +1,35 @@
-import notification_styles from "../styles/Notification.module.css";
+import React from "react";
+import styles from "../styles/Notification.module.css";
 
-export const Notification = ({ message, type }) => {
-  // Принимает: success, error, warning
-  /*
-    Подсказка: В зависимости от состояния, добавляйте или удаляйте класс on через условное выражение: className={`${styles.switch} ${isOn ? styles.on : ''}`}.
+class Notification extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      isOn: false,
+      switch: "Показать",
+    };
+  }
+  toggleVisible = () => {
+    const isOn = !this.state.isOn;
+    this.setState({ isOn: isOn });
+    this.setState({ switch: isOn ? "Скрыть" : "Показать" });
+  };
+  render() {
+    return (
+      <div>
+        <button onClick={this.toggleVisible}>
+          {this.state.switch} уведомление {this.props.type}
+        </button>
+        <div
+          className={`${styles[this.props.type]} ${
+            this.state.isOn ? styles.on : ""
+          }`}
+        >
+          {this.props.message}
+        </div>
+      </div>
+    );
+  }
+}
 
-    — это пока непонятно, к этому моменту мы еще не проходили "состояния"
-   */
-
-  return <p className={notification_styles[type]}>{message}</p>;
-};
+export default Notification;

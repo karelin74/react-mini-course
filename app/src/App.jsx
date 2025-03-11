@@ -4,7 +4,7 @@ import Greeting from "./components/Greeting";
 import { UserProfile } from "./components/UserProfile";
 import { LoginStatus } from "./components/LoginStatus";
 import { Button } from "./components/Button";
-import { Notification } from "./components/Notification";
+import Notification from "./components/Notification";
 import { UserInfo } from "./components/UserInfo";
 import { TaskList } from "./components/TaskList";
 import { Article } from "./components/Article";

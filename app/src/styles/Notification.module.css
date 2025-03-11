@@ -1,14 +1,21 @@
 .success {
   background-color: green;
   color: white;
+  visibility: hidden;
 }
 
 .error {
   background-color: red;
   color: white;
+  visibility: hidden;
 }
 
 .warning {
   background-color: yellow;
   color: black;
+  visibility: hidden;
+}
+
+.on {
+  visibility: visible;
 }
