@@ -1,0 +1,4 @@
+alias dev='npm run dev'
+alias build='npm run build'
+alias start='npm run start'
+alias pretty='npm run prettify'

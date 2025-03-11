@@ -1,0 +1,18 @@
+/* *****
+* For format details, see https://aka.ms/devcontainer.json. For config options, see the
+* README at: https://github.com/devcontainers/templates/tree/main/src/docker-existing-docker-compose
+***** */
+{
+  "name": "REACT-MINI-DEV",
+  "workspaceFolder": "/workspace/app",
+  "dockerComposeFile": ["compose.yml"],
+  "service": "react-mini",
+  "customizations": {
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "vscode": {
+      "extensions": ["dbaeumer.vscode-eslint", "esbenp.prettier-vscode"]
+    }
+  }
+}
